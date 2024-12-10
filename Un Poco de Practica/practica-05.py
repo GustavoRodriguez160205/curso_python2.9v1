@@ -51,7 +51,7 @@ for provin in prov:
 
 prov = ["Buenos Aires", "CABA", "Mendoza", "Córdoba", "Santa Fe"]
 
-prov.sort()
+prov.sort() # Para ordenar
 
 print("Las provincias ordenadas quedan así:")
 for pro in prov:
@@ -66,7 +66,7 @@ prov = ["Buenos Aires", "CABA", "Mendoza", "Córdoba", "Santa Fe"]
 cont = 0
 
 for pro in prov:
-    if len(pro.replace(" " , "")) > 10:
+    if len(pro.replace(" " , "")) > 10: # Quitamos los espacios y vemos que tengan más de 10 caracteres
         cont += 1
 
 print(f"Hay {contador} provincia con más de 10 caracteres.")
@@ -78,7 +78,7 @@ print(f"Hay {contador} provincia con más de 10 caracteres.")
 prov = ["Buenos Aires", "CABA", "Mendoza", "Córdoba", "Santa Fe"]
 
 for pro in prov:
-    if "o" in pro.lower():
+    if "o" in pro.lower(): # Vemos que provincias tienen la o y ponemos todo en minusculas
         print(f"La provincia '{pro}' contiene la letra 'o'.")
     else:
         print(f"La provincia '{pro}' no ontiene la letra 'o'.")
