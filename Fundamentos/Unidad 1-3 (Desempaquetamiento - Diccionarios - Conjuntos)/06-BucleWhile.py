@@ -92,5 +92,52 @@ while contador < len(texto):
 
 print(f"La letra 'a' aparece {cantidad_a} veces en la cadena")
 
+##################################################################
+
+## Contador en Reversa
+
+numero = int(input("Ingresa un número para contar hacia atrás:"))
+
+while numero >= 1:
+    print(numero)
+    numero -= 1
+
+#####################################################################
+
+## Suma de los primeros números
+
+n = int(input("Ingresa un número: "))
+suma = 0
+i = 1
+
+while i <= n:
+    suma += i  # Sumar el valor de i al acumulador
+    i += 1  # Incrementar i en cada iteración
+
+print("La suma de los primeros", n, "números es:", suma)
 
 
+########################################################################
+
+## Contar dígitos de un número
+
+numero = int(input("Ingresa un número:"))
+contador = 0
+
+while numero >= 0:
+    numero = numero // 10
+    contador += 1
+
+print("El número tene" , contador, "digitos. ")
+
+
+###########################################################################
+
+## Generar secuencia de fibonacci
+
+n = int(input("Ingresa un número para generar la secuencia de Fibonacci: "))
+a, b = 0, 1
+
+while a <= n:
+    print(a, end=" ")  # Imprimir el número actual
+    a, b = b, a + b  # Actualizar los valores de a y b para la siguiente iteración
