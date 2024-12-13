@@ -9,15 +9,23 @@
    # - Calcular cuanto tiempo lo haria dalto que habla un 30% más rapido
 
 
-frase = input("Decime una frase y te calculo cuanto tardarías si tuviaras que decirla:")
+frase = input("Decime una frase y te calculo cuanto tiempo tardaria en decirla dalto:")
 
-palabras_sep = frase.split(" ") # Separamos por espacios
-cantd_palabras = len(palabras_sep) # Calculamos la longitud
+palabras = frase.split()
+cant_palabras = len(palabras)
 
-# Condidional para calcular cuantas palabras escribio
-if cantd_palabras > 120:
-    print("Para flaco tampoco te pedi un testamento")
+tiempo_normal = cant_palabras / 2
+tiempo = tiempo_normal * 0.7
 
-print(f"Dijiste: {cantd_palabras} palabras , y tardarias { cantd_palabras / 2 } segundos en decirlas")
-print(f"Dalto se demoraría {cantd_palabras * 100 // 2 * 1.3 / 100} segundos en decirlo.")
+tiempo_norm_redond = round(tiempo_normal , 2)
+tiempo_dalto_redond = round(tiempo , 2)
 
+if tiempo_normal > 60:
+    print("Para , no te pedi un testamento")
+else:
+    print("Frase aceptable.")
+   
+print(f"Dijiste {cant_palabras} palabras y tardarías aproximadamente {cant_palabras} segundos en decirlas.")
+print(f"Dalto lo diría en aproximadamente {tiempo} segundos.")
+
+## Codigo Optimizado
