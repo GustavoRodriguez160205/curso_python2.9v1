@@ -7,6 +7,7 @@
 ## Los diccionarios son también conocidos como "mapas" o "hashmaps" en algunos lenguajes.
 
 ## Características principales:
+
 ## - Claves únicas: Cada clave dentro de un diccionario debe ser única. Si se intenta insertar una clave duplicada, el valor asociado a la clave original será sobrescrito.
 ## - Acceso rápido: Los diccionarios permiten buscar un valor asociado a una clave en tiempo constante promedio, lo que los hace muy eficientes para este tipo de operación.
 ## - Mutable: Los diccionarios son estructuras mutables, es decir, se pueden modificar después de su creación (agregar, modificar o eliminar elementos).

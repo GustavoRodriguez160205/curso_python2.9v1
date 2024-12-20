@@ -1,4 +1,5 @@
 ### Desempaquetado de variables:
+
 ### Definicíon: 
 
 ## El desempaquetado de variables en Python es una forma de asignar los valores de una tupla o lista directamente a variables, de manera simple y ordenada.

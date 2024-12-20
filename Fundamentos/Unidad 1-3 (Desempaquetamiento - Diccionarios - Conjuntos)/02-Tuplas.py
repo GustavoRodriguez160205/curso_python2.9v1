@@ -6,6 +6,8 @@
 ## Son muy útiles cuando necesitas asegurarte de que los datos no sean modificados accidentalmente.
 
 ## Características de las tuplas:
+
+
 ##   Inmutabilidad: Una vez creada una tupla, no se puede cambiar. Esto las hace más seguras en cuanto a manipulación de datos.
 ##   Ordenada: Los elementos dentro de una tupla mantienen su orden, es decir, el primer elemento es siempre el primero, el segundo es siempre el segundo, etc.
 ##   Accesible por índice: Puedes acceder a los elementos de una tupla usando índices, al igual que en las listas.
