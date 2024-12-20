@@ -100,3 +100,7 @@ print(f"Longitud del conjunto: {len(conjunto)}")
 
 # Verificando si un elemento está en el conjunto
 print(f"¿Está el elemento 3 en el conjunto?: {3 in conjunto}")  # Salida: True
+
+
+################################################
+

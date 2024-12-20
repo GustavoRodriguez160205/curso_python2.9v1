@@ -54,3 +54,64 @@ print(f"Copia del diccionario: {copia_diccionario}")
 nuevas_claves = ["x", "y", "z"]
 diccionario_nuevo = dict.fromkeys(nuevas_claves, 0)
 print(f"Diccionario creado con fromkeys: {diccionario_nuevo}")
+
+##############################
+
+# Recorriendo un diccionario
+
+data = {
+
+    "Nombre": "Gustavo",
+    "Apellido": "Dalto",
+    "Edad": 19
+}
+
+claves = data.keys()
+
+for clave in claves:
+    print(f"Clave: {clave}")
+
+
+#################################
+
+# Recorriendo pares clave-valor
+
+diccionario = {
+ 
+    "nombre": "Lucas",
+    "apellido": "Dalto",
+    "subs": 10000000
+}
+
+for clave,valor in diccionario.items():
+    print(f"Clave: {clave} , Valor: {valor}")
+
+
+############################################
+
+# Recorriendo los valores
+
+diccionario = {
+
+    "nombre": "Lucas",
+    "apellido": "Dalto",
+    "subs": 10000000
+}
+
+for valor in diccionario.values():
+    print(f"Valor: {valor}")
+
+
+##############################################
+
+# Recorriendo solo las claves y accediendo a los valores
+
+diccionario = {
+    "nombre": "Lucas",
+    "apellido": "Dalto",
+    "subs": 10000000
+}
+
+for clave in diccionario:
+    valor = diccionario[clave]  
+    print(f"Clave: {clave}, Valor: {valor}")
