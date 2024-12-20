@@ -1,41 +1,56 @@
-### Metodos de Diccionarios
 
-
-## 01. Keys (Nos devuelve las claves del diccionario). (También itera el diccionario)
 
 diccionario = {
-    "nombre":" Lucas",
+    "nombre": "Lucas",
     "apellido": "Dalto",
     "subs": 10000000
 }
 
+
+# 01. keys() - Devuelve todas las claves del diccionario
 claves = diccionario.keys()
-print(f"Las claves del diccionario son: {claves}")
+print(f"Las claves del diccionario son: {list(claves)}")
 
+# 02. values() - Devuelve todos los valores del diccionario
+valores = diccionario.values()
+print(f"Los valores del diccionario son: {list(valores)}")
 
-## 02. Get (Devuelve el valor de una clave). 
+# 03. items() - Devuelve los pares clave-valor como tuplas
+pares = diccionario.items()
+print(f"Los pares clave-valor del diccionario son: {list(pares)}")
 
+# 04. get() - Devuelve el valor de una clave específica
+subs = diccionario.get("subs")
+print(f"Los suscriptores son: {subs}")
 
-claves = diccionario.get("jajsjajdjs")
-print("Hola papa , el programa continua ! ")
+# Si la clave no existe, devuelve None o un valor por defecto
+clave_inexistente = diccionario.get("edad", "No especificado")
+print(f"Edad: {clave_inexistente}")
 
+# 05. update() - Actualiza o agrega elementos al diccionario
+diccionario.update({"edad": 30})
+print(f"Diccionario actualizado: {diccionario}")
 
-## Aclaración: (Si no encuentra nada el programa continua)
+# 06. pop() - Elimina una clave específica y devuelve su valor
+eliminado = diccionario.pop("apellido")
+print(f"Elemento eliminado: {eliminado}")
+print(f"Diccionario después de pop: {diccionario}")
 
+# 07. popitem() - Elimina y devuelve el último par clave-valor
+ultimo = diccionario.popitem()
+print(f"Último elemento eliminado: {ultimo}")
+print(f"Diccionario después de popitem: {diccionario}")
 
-## 03. Clear (Elimina todos los elementos de la lista)
-
+# 08. clear() - Elimina todos los elementos del diccionario
 diccionario.clear()
-print(f"El diccionario eliminado: {diccionario}")
+print(f"Diccionario después de clear: {diccionario}")
 
+# 09. copy() - Crea una copia del diccionario
+diccionario_original = {"a": 1, "b": 2, "c": 3}
+copia_diccionario = diccionario_original.copy()
+print(f"Copia del diccionario: {copia_diccionario}")
 
-## 04. Pop (Igual que en las listas)
-
-diccionario.pop("nombre")
-print(f"El diccionario sin nombre: {diccionario}")
-
-
-## 05. Items (Nos sirve para recorrer el elemento)
-
-diccionario_iterable = diccionario.items()
-print(diccionario)
+# 10. fromkeys() - Crea un nuevo diccionario con claves específicas y un valor predeterminado
+nuevas_claves = ["x", "y", "z"]
+diccionario_nuevo = dict.fromkeys(nuevas_claves, 0)
+print(f"Diccionario creado con fromkeys: {diccionario_nuevo}")
