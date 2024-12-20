@@ -68,5 +68,5 @@ def interacciones():
             print("Opción inválida. Por favor, intenta de nuevo.")
 
 
-# Llamada principal
+
 interacciones()
