@@ -1,43 +1,39 @@
-##########################################
+##############################################
 
-## Un diccionario es una estructura de datos en programación que almacena pares de clave-valor,
-## permitiendo acceder al valor asociado a una clave de manera rápida y eficiente.
-## En este tipo de estructuras, cada clave es única dentro del diccionario, 
-## lo que significa que no puede haber claves duplicadas. 
-## Los diccionarios son también conocidos como "mapas" o "hashmaps" en algunos lenguajes.
+# Introducción a los diccionarios
+# Un diccionario es una estructura de datos que almacena pares de clave-valor,
+# permitiendo acceder rápidamente al valor asociado a una clave.
 
-## Características principales:
+# Características principales:
+# - Claves únicas: Cada clave debe ser única, y las claves duplicadas sobrescriben el valor anterior.
+# - Acceso rápido: Buscar valores por claves es eficiente, en promedio de tiempo constante.
+# - Mutable: Los diccionarios pueden modificarse después de crearse.
+# - Ordenados (a partir de Python 3.7): Mantienen el orden de inserción.
 
-## - Claves únicas: Cada clave dentro de un diccionario debe ser única. Si se intenta insertar una clave duplicada, el valor asociado a la clave original será sobrescrito.
-## - Acceso rápido: Los diccionarios permiten buscar un valor asociado a una clave en tiempo constante promedio, lo que los hace muy eficientes para este tipo de operación.
-## - Mutable: Los diccionarios son estructuras mutables, es decir, se pueden modificar después de su creación (agregar, modificar o eliminar elementos).
-## - No ordenados (en algunos lenguajes): En muchos lenguajes, como Python antes de la versión 3.7, los diccionarios no garantizan un orden específico de los elementos. A partir de Python 3.7, los diccionarios mantienen el orden de inserción.
+##############################################
 
-############################################
+# Métodos de creación de diccionarios
 
-### Métodos de Creación:
-
-# Método 1: Usando dict() para crear un diccionario
-diccionario = dict(nombre= "Gustavo", apellido= "Rodriguez")
+# Método 1: Usando dict()
+diccionario = dict(nombre="Gustavo", apellido="Rodriguez")
 print("Diccionario creado con dict():", diccionario)
 
-# Método 2: Usando fromkeys() nos permite crear un diccionario sin valores
+# Método 2: Usando fromkeys() para crear un diccionario con claves pero sin valores
+diccionario = dict.fromkeys(["Nombre", "Apellido"])
+print("Diccionario con valores None:", diccionario)
 
-diccionario = dict.fromkeys(["Nombre" , "Apellido"])
-print("Creando con valores none:" , diccionario["Apellido"])
+# Método 3: Usando fromkeys() con un valor por defecto
+diccionario = dict.fromkeys(["Nombre", "Apellido"], "No se")
+print("Diccionario con valores por defecto:", diccionario)
 
+##############################################
 
-# Creando diccionarios cambiando el valor por defecto a "No se"
+# Claves no mutables en diccionarios
+# Las listas no pueden ser claves porque son mutables,
+# pero podemos usar `frozenset` para crear claves inmutables.
 
-diccionario = dict.fromkeys(["Nombre" , "Apellio"], "No se")
-print("Diccionario con valores por defecto:" , diccionario)
-
-#############################################
-
-## Las listas no pueden ser claves de un diccionario debido a que son mutables, 
-## pero podemos usar `frozenset`, que es inmutable, como clave.
-
-# Usando frozenset como clave para almacenar un conjunto inmutable
+# Usando frozenset como clave
 diccionario_conjunto = {frozenset(["Dalto", "Rancio"]): "Jajaja"}
 print("Diccionario con frozenset como clave:", diccionario_conjunto)
 
+##############################################

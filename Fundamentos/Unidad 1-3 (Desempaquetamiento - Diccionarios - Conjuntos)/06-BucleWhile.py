@@ -1,143 +1,122 @@
 ####################################################
 
-contador = 0 # Variable que se va a ir incrementando
+# Incremento del contador
+contador = 0  # Variable que se va a ir incrementando
 
 # Se ejecutará mientras el contador sea menor que 10
-# Vuelta tras vuelta se verifica la condición
 while contador < 10:
     contador += 1  # Incrementamos el contador en 1
-    print(contador)  
-    
+    print(contador)
 
 print("El bucle 'while' ha terminado")
+####################################################
 
-
-#######################################################
-
-## Algunos Ejercicios para entenderlos
+# Ejercicio: Cuenta regresiva
 
 contador = 10
 
-while contador >= 10:
+while contador > 0:  # Cambié >= 10 a > 0 para corregir la lógica
     contador -= 1
     print(contador)
 
 print("¡Despegue!")
 
+####################################################
 
-###########################################################
-
-## Suma de números del 1 al 50
-
-suma = 0 # Aqui se va a incrementar 
-numero = 1 # Comenzamos desde 0
-
+# Suma de números del 1 al 50
+suma = 0  # Acumulador
+numero = 1  # Comenzamos desde 1
 
 while numero <= 50:
-    suma += numero # Sumamos el número actual 
-    numero += 1 # Pasamos al siguiente número
+    suma += numero  # Sumamos el número actual
+    numero += 1  # Pasamos al siguiente número
 
-print("La suma de los números del 1 al 100 es:" , suma)
+print("La suma de los números del 1 al 50 es:", suma)
 
+####################################################
 
-############################################################
-
-## Pedir contraseña
-
+# Pedir contraseña
 contraseña = ""
 
-while contraseña != '1234': # Bucle que se ejecutara hasta que la contraseña sea 1234
-    contraseña = input("Ingresa la contraseña:") # Pedimos la Contraseña
+while contraseña != '1234':  # Se ejecutará hasta que la contraseña sea '1234'
+    contraseña = input("Ingresa la contraseña: ")
 
 print("Acceso concedido")
 
-##############################################################
+####################################################
 
-## Números Pares
-
+# Números pares
 numero = 0
 
-while numero <= 20: # Se ejecutara mientras el número sea <= a 20
-    numero += 2 # Incrementamos en 2 para obtener el número par
+while numero <= 20:  # Se ejecutará mientras el número sea menor o igual a 20
     print(f"Los números pares son: {numero}")
+    numero += 2  # Incrementamos en 2
 
-###############################################################
+####################################################
 
-## Suma hasta que sea suficiente
-
+# Suma hasta que sea suficiente
 suma_total = 0
 numero = 0
 
-while numero >= 0: # Se ejecutara hasta que sea un num negativo
-    numero = int(input("Ingresa un número ( negativo para salir ):"))
-    if numero >= 0: # Si el número es positivo o cero, lo sumamos
+while numero >= 0:  # Se ejecutará hasta que se ingrese un número negativo
+    numero = int(input("Ingresa un número (negativo para salir): "))
+    if numero >= 0:  # Si el número es positivo, lo sumamos
         suma_total += numero
 
-print("La suma total de los números positivos es:" , suma_total)
+print("La suma total de los números positivos es:", suma_total)
 
 
-####################################################################
+####################################################
 
-## Contar la letra "a"
+# Contar la letra "a"
+texto = input("Ingresa una cadena de texto: ")
 
-texto = input("Ingresa una cadena de texto:")
-
-contador = 0  # Recorre cada carácter
-cantidad_a = 0 # Cuenta las A
+contador = 0  # Índice para recorrer el texto
+cantidad_a = 0  # Contador de la letra 'a'
 
 while contador < len(texto):
-    if texto[contador].lower() == "a": # Comprobamos el caracter actual
-        cantidad_a += 1 # Si aparece una "a" aumentamos el contador
-    contador += 1 # Pasamos al siguiente carácter
+    if texto[contador].lower() == "a":  # Comprobamos el carácter actual
+        cantidad_a += 1
+    contador += 1
 
-print(f"La letra 'a' aparece {cantidad_a} veces en la cadena")
+print(f"La letra 'a' aparece {cantidad_a} veces en la cadena.")
+####################################################
 
-##################################################################
-
-## Contador en Reversa
-
-numero = int(input("Ingresa un número para contar hacia atrás:"))
+# Contador en reversa
+numero = int(input("Ingresa un número para contar hacia atrás: "))
 
 while numero >= 1:
     print(numero)
     numero -= 1
+####################################################
 
-#####################################################################
-
-## Suma de los primeros números
-
+# Suma de los primeros números
 n = int(input("Ingresa un número: "))
 suma = 0
 i = 1
 
 while i <= n:
-    suma += i  # Sumar el valor de i al acumulador
-    i += 1  # Incrementar i en cada iteración
+    suma += i  # Acumulamos el valor de i
+    i += 1  # Incrementamos i
 
 print("La suma de los primeros", n, "números es:", suma)
+####################################################
 
-
-########################################################################
-
-## Contar dígitos de un número
-
-numero = int(input("Ingresa un número:"))
+# Contar dígitos de un número
+numero = int(input("Ingresa un número: "))
 contador = 0
 
-while numero >= 0:
+while numero > 0:  # Ajusté para manejar números positivos únicamente
     numero = numero // 10
     contador += 1
 
-print("El número tene" , contador, "digitos. ")
+print("El número tiene", contador, "dígitos.")
+####################################################
 
-
-###########################################################################
-
-## Generar secuencia de fibonacci
-
+# Generar secuencia de Fibonacci
 n = int(input("Ingresa un número para generar la secuencia de Fibonacci: "))
 a, b = 0, 1
 
 while a <= n:
-    print(a, end=" ")  # Imprimir el número actual
-    a, b = b, a + b  # Actualizar los valores de a y b para la siguiente iteración
+    print(a, end=" ")  # Imprimimos el número actual
+    a, b = b, a + b  # Actualizamos los valores de a y b

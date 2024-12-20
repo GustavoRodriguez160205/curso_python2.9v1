@@ -1,80 +1,86 @@
-# Introducción a funciones integradas en Python
-# Python incluye muchas funciones integradas (built-in) que puedes usar sin necesidad de importar módulos adicionales.
-# Estas funciones facilitan tareas comunes como buscar valores máximos/mínimos, redondear números, evaluar condiciones lógicas, y más.
+# FUNCIONES INTEGRADAS EN PYTHON
+# Python incluye una gran cantidad de funciones integradas que puedes utilizar sin necesidad de importar módulos adicionales.
+# Estas funciones simplifican tareas comunes y hacen que el código sea más eficiente y fácil de escribir.
 
 #######################################################
 # Ejemplo 1: Usando `max` para encontrar el número más alto en una lista
+#######################################################
 
 numeros = [4, 7, 1, 42, 15]
 
-# La función `max` retorna el elemento más grande de un iterable (como una lista)
+# La función `max` retorna el valor más grande de un iterable, como una lista
 numero_mayor = max(numeros)
-print(f"El número más alto de la lista {numeros} es: {numero_mayor}")
+print(f"El número más alto de la lista {numeros} es: {numero_mayor}")  # Imprime: El número más alto de la lista [4, 7, 1, 42, 15] es: 42
 
 #######################################################
 # Ejemplo 2: Usando `min` para encontrar el número más bajo en una lista
+#######################################################
 
-# La función `min` retorna el elemento más pequeño de un iterable
+# La función `min` retorna el valor más pequeño de un iterable
 numero_menor = min(numeros)
-print(f"El número más bajo de la lista {numeros} es: {numero_menor}")
+print(f"El número más bajo de la lista {numeros} es: {numero_menor}")  # Imprime: El número más bajo de la lista [4, 7, 1, 42, 15] es: 1
 
 #######################################################
 # Ejemplo 3: Redondear números con `round`
+#######################################################
 
-# Redondeo a un número específico de decimales
 numero = 12.345678
 
-# Redondear a 6 decimales
-numero_redondeado = round(numero, 6)  # El segundo argumento indica la cantidad de decimales
-print(f"El número {numero} redondeado a 6 decimales es: {numero_redondeado}")
+# Redondear un número a una cantidad específica de decimales
+numero_redondeado = round(numero, 6)  # Redondea a 6 decimales
+print(f"El número {numero} redondeado a 6 decimales es: {numero_redondeado}")  # Imprime: El número 12.345678 redondeado a 6 decimales es: 12.345678
 
-# Otra forma: Redondear al entero más cercano
-# Multiplicamos y luego dividimos para simular un redondeo a 2 decimales manualmente
-numero_redondeado_2_decimales = round(numero * 100) / 100
-print(f"El número {numero} redondeado manualmente a 2 decimales es: {numero_redondeado_2_decimales}")
+# Redondear a 2 decimales de forma manual
+numero_redondeado_2_decimales = round(numero * 100) / 100  # Redondea a 2 decimales
+print(f"El número {numero} redondeado manualmente a 2 decimales es: {numero_redondeado_2_decimales}")  # Imprime: El número 12.345678 redondeado manualmente a 2 decimales es: 12.35
 
 #######################################################
 # Ejemplo 4: Usando `bool` para evaluar valores como True o False
+#######################################################
 
-# La función `bool` convierte un valor a su equivalencia lógica:
-# - `False` para: 0, cadenas vacías (""), listas vacías ([]), None, etc.
-# - `True` para: números distintos de 0, cadenas no vacías, listas con elementos, etc.
+# La función `bool` convierte un valor en su equivalente booleano (True o False).
+# Algunos valores que son equivalentes a False: 0, cadenas vacías (""), listas vacías ([]), None, etc.
+# Otros valores se consideran equivalentes a True: números diferentes de 0, cadenas no vacías, listas con elementos, etc.
 
-# Ejemplo 4.1: Evaluar un número igual a 0
+# Evaluar el valor 0, que equivale a False
 resultado = bool(0)
-print(f"Evaluar 0 con `bool` da como resultado: {resultado}")  # False
+print(f"Evaluar 0 con `bool` da como resultado: {resultado}")  # Imprime: Evaluar 0 con `bool` da como resultado: False
 
-# Ejemplo 4.2: Evaluar un número distinto de 0
+# Evaluar un número distinto de 0, que equivale a True
 resultado = bool(42)
-print(f"Evaluar 42 con `bool` da como resultado: {resultado}")  # True
+print(f"Evaluar 42 con `bool` da como resultado: {resultado}")  # Imprime: Evaluar 42 con `bool` da como resultado: True
 
-# Ejemplo 4.3: Evaluar una cadena vacía
+# Evaluar una cadena vacía, que equivale a False
 resultado = bool("")
-print(f"Evaluar una cadena vacía con `bool` da como resultado: {resultado}")  # False
+print(f"Evaluar una cadena vacía con `bool` da como resultado: {resultado}")  # Imprime: Evaluar una cadena vacía con `bool` da como resultado: False
 
-# Ejemplo 4.4: Evaluar una lista no vacía
+# Evaluar una lista no vacía, que equivale a True
 resultado = bool([1, 2, 3])
-print(f"Evaluar una lista no vacía con `bool` da como resultado: {resultado}")  # True
+print(f"Evaluar una lista no vacía con `bool` da como resultado: {resultado}")  # Imprime: Evaluar una lista no vacía con `bool` da como resultado: True
 
 #######################################################
 # Ejemplo 5: Usando `all` para evaluar todos los elementos de un iterable
+#######################################################
 
-# La función `all` retorna True si **todos** los elementos de un iterable son verdaderos (equivalen a `True`).
+# La función `all` retorna True si **todos** los elementos de un iterable son verdaderos (equivalentes a `True`).
 # Retorna False si al menos un elemento equivale a `False`.
 
-# Ejemplo con una lista donde todos los elementos son "verdaderos"
+# Lista con todos los elementos "verdaderos"
 resultado_all = all([123, "True", "False"])  # Todos los elementos son no vacíos, así que son True
-print(f"Evaluar una lista con `all([123, 'True', 'False'])` da como resultado: {resultado_all}")  # True
+print(f"Evaluar una lista con `all([123, 'True', 'False'])` da como resultado: {resultado_all}")  # Imprime: Evaluar una lista con `all([123, 'True', 'False'])` da como resultado: True
 
-# Ejemplo con una lista que contiene al menos un elemento falso
+# Lista con un elemento falso (cadena vacía "")
 resultado_all = all([123, "", "False"])  # La cadena vacía ("") equivale a False
-print(f"Evaluar una lista con `all([123, '', 'False'])` da como resultado: {resultado_all}")  # False
+print(f"Evaluar una lista con `all([123, '', 'False'])` da como resultado: {resultado_all}")  # Imprime: Evaluar una lista con `all([123, '', 'False'])` da como resultado: False
 
-################################################################
+#######################################################
+# Ejemplo 6: Usando `sum` para sumar todos los valores de un iterable
+#######################################################
 
-# Ejemplo 6: Usando 'Sum' Suma todos los valores de un iterable
+# La función `sum` suma todos los valores de un iterable, como una lista de números.
 
-numero = [12 , 44 , 11 , 55 , 44 , 33 , 22 , 11]
+numero = [12, 44, 11, 55, 44, 33, 22, 11]
 
+# Sumar los elementos de la lista
 suma = sum(numero)
-print(f"La suma total con sum es: {suma}")
+print(f"La suma total con `sum` es: {suma}")  # Imprime: La suma total con `sum` es: 232

@@ -1,6 +1,7 @@
 # Introducción: Creando mis propias funciones
 
 #######################################################
+
 # Ejemplo 1: Función sin parámetros
 def saludar():
     print("Hola Lucas, mi maestro. ¿Cómo andas?")
@@ -9,6 +10,7 @@ def saludar():
 saludar()
 
 #######################################################
+
 # Ejemplo 2: Función con parámetros
 def saludar_personalizado(nombre, sexo):
     adjetivos = {
@@ -25,8 +27,8 @@ saludar_personalizado("Lucas", "Hombre")
 saludar_personalizado("Alex", "Otro")
 
 #######################################################
-# Ejemplo 3: Función que retorna múltiples valores
 
+# Ejemplo 3: Función que retorna múltiples valores
 def crear_contraseña_random(num):
     chars = "abcdefghij"
     primer_digito = int(str(num)[0])  # Obtenemos el primer dígito
@@ -44,8 +46,7 @@ print(f"El número utilizado para crearla fue: {primer_num}")
 
 #######################################################
 
-# Es lo mismo que el ejemplo de abajo solo que usando *args como parametros
-
+# Ejemplo 4: Funciones con *args (parámetros variables)
 def suma(nombre, *numeros):
     # Usamos sum para calcular la suma de los números
     return f"{nombre}, la suma de tus números es: {sum(numeros)}"
@@ -56,8 +57,7 @@ print(resultado)
 
 #######################################################
 
-# Ejemplo 5: Optimización de la suma total ("Forma Optima de Sumar Valores")
-
+# Ejemplo 5: Optimización de la suma total
 def suma_total(numeros):
     # sum ya funciona directamente con iterables
     return sum([*numeros])
@@ -66,22 +66,25 @@ def suma_total(numeros):
 resultado2 = suma_total([5, 31, 41, 11, 22, 44, 55])
 print(f"La suma total es: {resultado2}")
 
-########################################################
+#######################################################
 
-# Ejemplo 6: Creando una función de 3 parametros
-
-def frase(nombre , apellido , adjetivo):
+# Ejemplo 6: Creando una función con varios parámetros y argumentos por clave
+def frase(nombre, apellido, adjetivo):
     return f"Hola {nombre} {apellido}, sos muy {adjetivo}"
 
-# Usando keyword arguments.  (No tienen Orden)
-frase_resultante = frase(adjetivo = "capo" , nombre = "Gustavo" , apellido = "Rodriguez")
+# Usando keyword arguments (no tienen orden)
+frase_resultante = frase(adjetivo="capo", nombre="Gustavo", apellido="Rodriguez")
+print(frase_resultante)
 
-###########################################################
+#######################################################
 
-# Ejemplo 7: Creando una función con parametro opcional y un valor por defecto
+# Ejemplo 7: Funciones con parámetros opcionales y valores por defecto
+def frase1(nombre, apellido, adjetivo="Pelotudo"):
+    return f"Hola {nombre} {apellido}, sos muy {adjetivo}"
 
-def frase1(nombre , apellido , adjetivo = "Pelotudo"):
-         return f"Hola {nombre} {apellido} , sos muy {adjetivo}"
-
-frase_final = frase1("Lucas" , "Dalto" , "Muy Inteligente") # Aca cambiamos
+# Cambiando el parámetro por defecto
+frase_final = frase1("Lucas", "Dalto", "Muy Inteligente")
 print(frase_final)
+
+##############################################
+
